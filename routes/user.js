@@ -10,7 +10,7 @@ const router = require("express").Router();
 
 
 //UPDATE
-//cannot upadateUser.
+//cannot upadateUser. 
 router.put("/:id", VerifytokenAndAuthorization, async (req,res)=>{
   if(req.body.password){
    req.body.password = CryptoJS.AES.encrypt(
